@@ -61,6 +61,7 @@
       >
         <CIcon name="cil-speedometer" height="50" class="text-danger"/>
       </CWidgetProgressIcon>
+              // eslint-disable-next-line vue/no-parsing-error
               </CCardGroup class="mb-4">
 
             <!-- <CCardGroup columns class="card-columns">
