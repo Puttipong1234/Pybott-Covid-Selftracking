@@ -1,0 +1,30 @@
+DEPLOY
+
+1. login with heroku
+2. Create APP
+
+3. Donwload and Install Git SCM 
+https://git-scm.com/download/win
+
+4. Donwload and Install Heroku CLI https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+
+5. ไปที่ Terminal ของโปรเจค แล้วรันคำสั่ง 
+	- heroku login
+	- git init
+	- heroku git:remote -a pybott-6th
+
+6. @terminal รันคำสั่ง
+	- pip install gunicorn
+	- pip freeze > requirements.txt
+
+7. สร้างไฟลืใหม่ (layerเดียวกันกับ app.py)
+	ตั้งชื่อไฟล์ว่า Procfile
+	ภายใน ใส่ตามนี้
+	web: gunicorn  app:app   
+
+8. @terminal รันคำสั่ง
+	- git add .
+	- git commit -m "first Commit"
+	- git push heroku master  
+	     หรือกรณีมี  branch ให้ใช้คำสั่ง git push heroku YourBranchName:master
+	- heroku ps:scale web=1
